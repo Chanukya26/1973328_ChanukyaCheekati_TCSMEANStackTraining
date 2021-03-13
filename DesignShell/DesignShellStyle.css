@@ -1,0 +1,26 @@
+.heading{
+    text-align: center;
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic ;
+    font-weight: bold;
+    font-size: 60px;
+    
+}
+.fontClass{
+    border-color: green;
+border-width: 5px;
+border-style:groove;
+}
+.borderDesign{
+    table-layout: initial;
+    border-collapse: separate;
+    border-color: silver;
+    border: 3px solid black;
+}
+.bdesign{
+    color: green;
+    border-color: red;
+    border-radius: 5px;
+    background-color: yellow;
+}
