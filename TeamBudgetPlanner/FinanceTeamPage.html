@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Team Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="BudgetPlanner.js">
+        </script>
+        <script>
+            function summate()
+            {
+                var obj = JSON.parse(localStorage.getItem("empInfo"))
+                var sum = 0;
+                for(var v=0; v<obj.length;v++)
+                {
+                    sum += parseFloat(obj[v].budget)
+                }
+                document.getElementById("total").innerText = sum;
+            }
+        </script>
+ 
+   <body>
+    <h1 align="center">Finance Team Page</h1>
+    <div class=mpdesign>
+
+   <input type="button" value="Get From Local Storage" onclick="get()"/>
+    
+    <table id="List">
+        <thead>
+            <tr>
+                <th>Name</th>
+                   <th>project</th>
+                   <th>budget</th>
+            </tr>
+        </thead> 
+        <tbody>
+ 
+        </tbody>
+     </table>
+     <div id="total"/>
+     <input type="button" value="Summate" onclick="summate()"/>
+    </div>
+    <br/><br/><br/><br/>
+    <a href="MainPage.html">Back to Main Page</a><br/>
+</body>
+</html>
