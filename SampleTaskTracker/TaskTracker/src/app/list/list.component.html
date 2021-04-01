@@ -1,0 +1,35 @@
+<div align="center">
+  <h1 style="color:red">Online task tracker</h1>
+  <div styel="background:background-color:powderblue;">
+    <input type='text'[(ngModel)]='inputValue' placeholder='Emp Name'>
+
+    <input type='text'[(ngModel)]='inputValue' placeholder='Add ID'>
+    <input type='text'[(ngModel)]='inputValue' placeholder=' ADD Task'>
+
+
+    <button mat-button color="warn" (click)='handleClick()' (keydown)='handleKeyDown($event)' >ADD</button>
+    <br/><br/><br/>
+    <table>
+      <tr>
+        <th>Task</th>
+        <th>Emp ID</th>
+        <th>Work</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let task of list let i = index">
+        <td> {{task.name}}</td>
+        <td> {{task.id}}</td>
+        <td>{{task.work}}</td>
+        <td><input type="checkbox" [(ngModel)]="task.isCompleted">
+          <span (click)='remove(i)'>Remove</span>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <!--<ul>
+    <li *ngFor="let task of list let i = index">
+      {{task.name}} <br/>  {{task.id}} <br/> {{task.work}}<br/>
+
+      
+    </li>
+  </ul>-->
